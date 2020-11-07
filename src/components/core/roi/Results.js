@@ -33,20 +33,23 @@ const Results = ({ view = false }) => {
 		return 0;
 	};
 
-	return (
-		<React.Fragment>
-			<div className={view ? 'active' : 'inactive'}>
+	const renderResults = () => {
+		return (
+			<React.Fragment>
 				<div className='results-container'>
 					<p className='result-head'>
 						{' '}
-						<GridIcon size={16} /> Result
+						<GridIcon size={16} /> Results
 					</p>
 					<div className='row1'>
 						<div className='item'>
 							<div className='card'>
 								<div className='card-body'>
 									<span className='sub-head'>
-										Return (Benifit)
+										Return{' '}
+										<span className='muted-max-text bold-text'>
+											<small>Benifit</small>
+										</span>
 									</span>
 								</div>
 								<hr />
@@ -61,7 +64,10 @@ const Results = ({ view = false }) => {
 							<div className='card'>
 								<div className='card-body'>
 									<span className='sub-head'>
-										Investment (Cost)
+										Investment{' '}
+										<span className='muted-max-text bold-text'>
+											<small>Cost</small>
+										</span>
 									</span>
 								</div>
 								<hr />
@@ -91,6 +97,14 @@ const Results = ({ view = false }) => {
 						</div>
 					</div>
 				</div>
+			</React.Fragment>
+		);
+	};
+
+	return (
+		<React.Fragment>
+			<div className={view ? 'active' : 'inactive'}>
+				{renderResults()}
 			</div>
 		</React.Fragment>
 	);
