@@ -1,6 +1,6 @@
 # Return of Investment Calculator app using React.js
 ## [APP LINK](https://roi-calculator.arunabharjun.vercel.app/)
-![](screens/ScreenShot.png)
+![](screens/ss.png)
 
 ## ▶️ Getting Started
 
