@@ -1,14 +1,14 @@
 import React from 'react';
 import './App.scss';
 import Routes from './Routes';
-import { ThemeProvider } from './components/providers/ThemeContext';
+import MasterContextProvider from './components/providers';
 
 function App() {
 	return (
 		<React.Fragment>
-			<ThemeProvider>
+			<MasterContextProvider>
 				<Routes />
-			</ThemeProvider>
+			</MasterContextProvider>
 		</React.Fragment>
 	);
 }

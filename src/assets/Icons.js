@@ -70,3 +70,94 @@ export const GithubIcon = ({ size = 20, classes = '' }) => {
 		</React.Fragment>
 	);
 };
+
+export const RightArrowIcon = ({ size = 20, classes = '' }) => {
+	return (
+		<React.Fragment>
+			<svg
+				xmlns='http://www.w3.org/2000/svg'
+				width={size}
+				height={size}
+				viewBox='0 0 24 24'
+				fill='none'
+				stroke='currentColor'
+				strokeWidth='2'
+				strokeLinecap='round'
+				strokeLinejoin='round'
+				className={`${classes}`}
+			>
+				<polyline points='9 18 15 12 9 6' />
+			</svg>
+		</React.Fragment>
+	);
+};
+
+export const HashIcon = ({ size = 20, classes = '' }) => {
+	return (
+		<React.Fragment>
+			<svg
+				xmlns='http://www.w3.org/2000/svg'
+				width={size}
+				height={size}
+				viewBox='0 0 24 24'
+				fill='none'
+				stroke='currentColor'
+				strokeWidth='2'
+				strokeLinecap='round'
+				strokeLinejoin='round'
+				className={`${classes}`}
+			>
+				<line x1='4' y1='9' x2='20' y2='9' />
+				<line x1='4' y1='15' x2='20' y2='15' />
+				<line x1='10' y1='3' x2='8' y2='21' />
+				<line x1='16' y1='3' x2='14' y2='21' />
+			</svg>
+		</React.Fragment>
+	);
+};
+
+export const EmailIcon = ({ size = 20, classes = '' }) => {
+	return (
+		<React.Fragment>
+			<svg
+				xmlns='http://www.w3.org/2000/svg'
+				width={size}
+				height={size}
+				viewBox='0 0 24 24'
+				fill='none'
+				stroke='currentColor'
+				strokeWidth='2'
+				strokeLinecap='round'
+				strokeLinejoin='round'
+				className={`${classes}`}
+			>
+				<circle cx='12' cy='12' r='4' />
+				<path d='M16 8v5a3 3 0 0 0 6 0v-1a10 10 0 1 0-3.92 7.94' />
+			</svg>
+		</React.Fragment>
+	);
+};
+
+export const GridIcon = ({ size = 20, classes = '' }) => {
+	return (
+		<React.Fragment>
+			<svg
+				xmlns='http://www.w3.org/2000/svg'
+				width={size}
+				height={size}
+				viewBox='0 0 24 24'
+				fill='none'
+				stroke='currentColor'
+				strokeWidth='2'
+				strokeLinecap='round'
+				strokeLinejoin='round'
+				className={`${classes}`}
+			>
+				<rect x='3' y='3' width='7' height='7' />
+				<rect x='14' y='3' width='7' height='7' />
+				<rect x='14' y='14' width='7' height='7' />
+				<rect x='3' y='14' width='7' height='7' />
+			</svg>
+		</React.Fragment>
+	);
+};

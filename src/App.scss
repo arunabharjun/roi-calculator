@@ -31,7 +31,7 @@
 	--nav-bg: #fff;
 	--nav-shadow: 0 0px 5px 3px rgba(0, 0, 0, 0.08);
 	--nav-border: transparent;
-	--card-shadow: 0 5px 10px 3px rgba(0, 0, 0, 0.05);
+	--card-shadow: 0 5px 10px 3px rgba(0, 0, 0, 0.02);
 	--theme-icon: rgb(250, 210, 99);
 	--search-icon: #e2e2e2;
 	--card-grad1: rgba(255, 255, 255, 1) 0%;
@@ -82,6 +82,17 @@
 	fill: var(--clr);
 }
 
+.inactive {
+	opacity: 0.5;
+	filter: grayscale(100%);
+	transition: all 0.3s !important;
+}
+
+.active {
+	opacity: 1;
+	filter: grayscale(0%);
+	transition: all 0.3s !important;
+}
 // class definations
 * {
 	margin: 0;
@@ -119,6 +130,16 @@
 	hr {
 		border-color: var(--hr) !important;
 	}
+
+	input::-webkit-outer-spin-button,
+	input::-webkit-inner-spin-button {
+		-webkit-appearance: none;
+		margin: 0;
+	}
+
+	input[type=number] {
+		-moz-appearance: textfield;
+	}
 }
 
 body,
@@ -138,6 +159,7 @@ main {
 }
 
 nav {
+	z-index: 10;
 	width: 100%;
 	position: fixed;
 	.nav-body {
@@ -201,6 +223,133 @@ footer {
 	}
 }
 
+.roi-form {
+	form {
+		label {
+			margin-bottom: 30px;
+			width: 100%;
+
+			span {
+				font-weight: 600;
+				color: var(--clr-muted);
+				svg {
+					position: relative;
+					top: 1px;
+					margin: 0 8px 0 0;
+					stroke: var(--clr-muted-max);
+				}
+			}
+
+			input {
+				background-color: var(--nav-bg);
+				margin-top: 10px;
+				padding: 15px 20px;
+				border: none;
+				border-radius: 6px;
+				width: 100%;
+				outline: none;
+			}
+		}
+
+		.email-div {
+			margin-top: 20px;
+			display: flex;
+			justify-content: space-between;
+			position: relative;
+			.input {
+				width: calc(100% - 80px);
+			}
+			.submit {
+				height: 100%;
+				width: 60px;
+				position: relative;
+				bottom: -20px;
+				button {
+					box-shadow: var(--card-shadow);
+					border-radius: 50%;
+					width: 60px;
+					height: 60px;
+					background-color: var(--blue);
+					width: 100%;
+					display: flex;
+					flex-direction: column;
+					justify-content: center;
+					align-items: center;
+
+					svg {
+						stroke: var(--bg);
+						stroke-width: 3px;
+					}
+				}
+			}
+		}
+	}
+}
+
+.calc-container {
+	display: flex;
+	.form-container {
+		width: 60%;
+	}
+	.result-container {
+		width: 40%;
+	}
+}
+
+.results-container {
+	.result-head {
+		padding: 0 0 4px 10px;
+		margin: 0;
+		font-weight: 600;
+		color: var(--clr-muted);
+		svg {
+			position: relative;
+			top: 1.5px;
+			margin: 0 8px 0 0;
+			stroke: var(--clr-muted-max);
+		}
+	}
+	.row1 {
+		display: flex;
+		.item {
+			padding: 0 10px 10px 10px;
+			width: 50%;
+		}
+	}
+	.row2 {
+		.item {
+			padding: 10px;
+			width: 100%;
+		}
+	}
+}
+
+.card {
+	background-color: var(--nav-bg);
+	box-shadow: var(--card-shadow);
+	border: solid 1px var(--nav-border) !important;
+	border-radius: 10px;
+
+	.card-body {
+		padding: 10px 15px;
+
+		.sub-head {
+			color: var(--clr-muted);
+			font-weight: 600;
+		}
+		.main-head {
+			font-weight: 800;
+			color: var(--clr-muted);
+		}
+
+		.sub-head,
+		.main-head {
+			position: relative;
+			top: 5px;
+		}
+	}
+}
+
 // small devices
 @media only screen and (max-width: 775px) {
 	.phone-hide {
@@ -217,6 +366,17 @@ footer {
 
 	main {
 		padding-bottom: 56px;
+	}
+
+	.calc-container {
+		display: flex;
+		flex-direction: column;
+		.form-container {
+			width: 100%;
+		}
+		.result-container {
+			width: 100%;
+		}
 	}
 }
 
@@ -240,6 +400,10 @@ footer {
 
 	main {
 		padding-top: 56px;
+	}
+
+	.roi-form {
+		padding-right: 20px;
 	}
 }
 

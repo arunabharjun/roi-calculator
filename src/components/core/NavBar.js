@@ -63,17 +63,17 @@ const NavBar = () => {
 				<Link to={'/'}>
 					<p className='nav-brand'>
 						{/**
-					 * Show the full brandname in desktops
-					 */}
+						 * Show the full brandname in desktops
+						 */}
 						<span className='name phone-hide'>
 							ROI <span className='accent-clr'>Calculator</span>
 						</span>
 
 						{/**
-					 * Show the short brandname in phones
-					 */}
+						 * Show the short brandname in phones
+						 */}
 						<span className='name phone-view'>
-							R<span className='accent-clr'>o</span>I
+							ROI<span className='accent-clr'> Calc.</span>
 						</span>
 					</p>
 				</Link>
