@@ -54,7 +54,6 @@ const FormElement = ({
 					<span>
 						{getIcon()}
 						{label}
-						{error && <span className='error-msg'>{errorMsg}</span>}
 					</span>
 
 					<br />
@@ -82,6 +81,9 @@ const FormElement = ({
 							}}
 						/>
 					)}
+					<span>
+						{error && <span className='error-msg'>{errorMsg}</span>}
+					</span>
 				</label>
 			</React.Fragment>
 		);

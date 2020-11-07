@@ -17,7 +17,7 @@ export const RoiProvider = ({ children }) => {
 		email: '',
 		error: {
 			status: true,
-			msg: ''
+			msg: ' '
 		}
 	});
 

@@ -6,7 +6,7 @@ export const emailHasError = (email) => {
 		if (domain === 'gmail' || domain === 'yahoo' || domain === 'ymail') {
 			return {
 				status: false,
-				msg: ''
+				msg: ' '
 			};
 		}
 		return {

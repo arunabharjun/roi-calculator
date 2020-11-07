@@ -270,7 +270,9 @@ footer {
 				}
 				.error-msg {
 					color: var(--red);
-					margin-left: 10px;
+					margin-left: 2px;
+					position: relative;
+					bottom: -8px;
 					font-size: 90%;
 				}
 			}
