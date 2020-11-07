@@ -7,7 +7,9 @@ const FormElement = ({
 	value = 0,
 	holder = '',
 	type = 'text',
-	autofocus = false
+	autofocus = false,
+	error = false,
+	errorMsg = ''
 }) => {
 	const [
 		values,
@@ -52,6 +54,7 @@ const FormElement = ({
 					<span>
 						{getIcon()}
 						{label}
+						{error && <span className='error-msg'>{errorMsg}</span>}
 					</span>
 
 					<br />

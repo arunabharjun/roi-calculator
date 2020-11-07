@@ -1,8 +1,9 @@
-import React, { useContext } from 'react';
+import React, { useContext, useEffect } from 'react';
 import { RoiContext } from '../../providers/RoiContext';
 import FormElement from './FormElement';
 import { RightArrowIcon } from '../../../assets/Icons';
 import Results from './Results';
+import { emailHasError } from '../../../helpers/emailValidator';
 
 const RoiForm = () => {
 	const [
@@ -10,11 +11,39 @@ const RoiForm = () => {
 		setValues
 	] = useContext(RoiContext);
 
-	const { cSuiteLeaders, lv1Leaders, knowledgeWorkers, email } = values;
+	const {
+		cSuiteLeaders,
+		lv1Leaders,
+		knowledgeWorkers,
+		email,
+		error
+	} = values;
 
 	const handleSubmit = (e) => {
 		e.preventDefault();
+		setValues({
+			...values,
+			error: emailHasError(email)
+		});
 	};
+
+	useEffect(
+		() => {
+			setValues({
+				...values,
+				error: {
+					status: true,
+					msg: ''
+				}
+			});
+		},
+		[
+			cSuiteLeaders,
+			lv1Leaders,
+			knowledgeWorkers,
+			email
+		]
+	);
 
 	const renderForm = () => {
 		return (
@@ -57,6 +86,8 @@ const RoiForm = () => {
 									value={email}
 									holder='email'
 									autofocus={false}
+									error={error.status}
+									errorMsg={error.msg}
 								/>
 							</div>
 							<div className='submit'>
@@ -77,7 +108,7 @@ const RoiForm = () => {
 				<div className='calc-container'>
 					<div className='form-container'>{renderForm()}</div>
 					<div className='result-container'>
-						<Results />
+						<Results view={!error.status} />
 					</div>
 				</div>
 			</React.Fragment>

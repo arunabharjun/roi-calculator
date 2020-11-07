@@ -15,7 +15,10 @@ export const RoiProvider = ({ children }) => {
 		lv1Leaders: '',
 		knowledgeWorkers: '',
 		email: '',
-		error: false
+		error: {
+			status: true,
+			msg: ''
+		}
 	});
 
 	return (

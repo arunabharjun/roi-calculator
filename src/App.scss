@@ -8,6 +8,7 @@
 	--clr-muted: #dadada;
 	--clr-muted-max: #818181;
 	--blue: #559ef1;
+	--red: rgb(255, 140, 156);
 	--nav-bg: #202020;
 	--nav-shadow: transparent;
 	--nav-border: rgba(255, 255, 255, 0.05);
@@ -19,6 +20,7 @@
 	--card-grad3: rgba(247, 247, 247, 0) 100%;
 	--shimmer-loader: rgba(255, 255, 255, 0.15);
 	--hr: rgba(255, 255, 255, 0.1);
+	--card-hr: rgba(255, 255, 255, 0.08);
 	transition: all 0.3s !important;
 }
 
@@ -28,6 +30,7 @@
 	--clr-muted: #504f4f;
 	--clr-muted-max: #a09f9f;
 	--blue: #004ca3;
+	--red: rgb(255, 0, 0);
 	--nav-bg: #fff;
 	--nav-shadow: 0 0px 5px 3px rgba(0, 0, 0, 0.08);
 	--nav-border: transparent;
@@ -39,6 +42,7 @@
 	--card-grad3: rgba(247, 247, 247, 0) 100%;
 	--shimmer-loader: rgba(0, 0, 0, 0.06);
 	--hr: rgba(0, 0, 0, 0.1);
+	--card-hr: rgba(0, 0, 0, 0.05);
 	transition: all 0.3s !important;
 }
 
@@ -238,6 +242,11 @@ footer {
 					margin: 0 8px 0 0;
 					stroke: var(--clr-muted-max);
 				}
+				.error-msg {
+					color: var(--red);
+					margin-left: 10px;
+					font-size: 90%;
+				}
 			}
 
 			input {
@@ -263,7 +272,7 @@ footer {
 				height: 100%;
 				width: 60px;
 				position: relative;
-				bottom: -20px;
+				bottom: -22px;
 				button {
 					box-shadow: var(--card-shadow);
 					border-radius: 50%;
@@ -330,6 +339,9 @@ footer {
 	border: solid 1px var(--nav-border) !important;
 	border-radius: 10px;
 
+	hr {
+		border-color: var(--card-hr) !important;
+	}
 	.card-body {
 		padding: 10px 15px;
 
