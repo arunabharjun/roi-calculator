@@ -97,6 +97,18 @@
 	filter: grayscale(0%);
 	transition: all 0.3s !important;
 }
+
+.big-text {
+	font-size: 30px;
+}
+
+.medium-text {
+	font-size: 18px;
+}
+
+.muted-text {
+	color: var(--clr-muted);
+}
 // class definations
 * {
 	margin: 0;

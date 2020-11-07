@@ -28,7 +28,7 @@ const Results = ({ view = false }) => {
 		const inv = getInvestment();
 
 		if (inv !== 0) {
-			return rtn / inv;
+			return Math.round(rtn / inv);
 		}
 		return 0;
 	};
@@ -51,7 +51,9 @@ const Results = ({ view = false }) => {
 								</div>
 								<hr />
 								<div className='card-body'>
-									<p>{view ? getReturn() : '0'}</p>
+									<p className='medium-text'>
+										{view ? getReturn() : '0'}
+									</p>
 								</div>
 							</div>
 						</div>
@@ -64,7 +66,9 @@ const Results = ({ view = false }) => {
 								</div>
 								<hr />
 								<div className='card-body'>
-									<p>{view ? getInvestment() : '0'}</p>
+									<p className='medium-text'>
+										{view ? getInvestment() : '0'}
+									</p>
 								</div>
 							</div>
 						</div>
@@ -79,7 +83,9 @@ const Results = ({ view = false }) => {
 								</div>
 								<hr />
 								<div className='card-body'>
-									<p>{view ? getRoi() : '0'}</p>
+									<p className='big-text muted-text'>
+										{view ? getRoi() : '0'}
+									</p>
 								</div>
 							</div>
 						</div>
