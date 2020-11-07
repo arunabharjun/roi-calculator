@@ -35,3 +35,12 @@ npm start
 ```
 
 The app should have opened in your default browser, but if it didn't, visit [http://localhost:3000/](http://localhost:3000/)
+
+## 🌟 Features
+
+1. Calculate the ROI
+2. Email Validation
+3. Dark & Light themes
+4. Custom 404 error page
+5. Respponsive layout
+6. Modern UI
