@@ -1,7 +1,7 @@
 # See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
 
 # others
-reactjs-news.code-workspace
+roi-calculator.code-workspace
 *.code-workspace
 .env
 /icons
