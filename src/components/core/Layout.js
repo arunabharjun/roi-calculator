@@ -12,15 +12,19 @@ const Layout = ({ children }) => {
 		setDarkMode
 	] = useContext(ThemeContext);
 
-	return (
-		<React.Fragment>
-			<main className={`${darkMode ? 'darkMode' : 'liteMode'}`}>
-				<NavBar />
-				{children}
-				<Footer />
-			</main>
-		</React.Fragment>
-	);
+	const renderLayout = () => {
+		return (
+			<React.Fragment>
+				<main className={`${darkMode ? 'darkMode' : 'liteMode'}`}>
+					<NavBar />
+					{children}
+					<Footer />
+				</main>
+			</React.Fragment>
+		);
+	};
+
+	return <React.Fragment>{renderLayout()}</React.Fragment>;
 };
 
 export default Layout;
