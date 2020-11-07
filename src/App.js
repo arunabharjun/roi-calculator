@@ -1,7 +1,7 @@
 import React from 'react';
 import './App.scss';
 import Routes from './Routes';
-import { ThemeProvider } from './components/ThemeContext';
+import { ThemeProvider } from './components/providers/ThemeContext';
 
 function App() {
 	return (

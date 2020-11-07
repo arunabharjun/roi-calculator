@@ -1,7 +1,7 @@
 import React, { useContext } from 'react';
-import { ThemeContext } from './ThemeContext';
 import NavBar from './NavBar';
-import Footer from './core/Footer';
+import Footer from './Footer';
+import { ThemeContext } from '../providers/ThemeContext';
 
 const Layout = ({ children }) => {
 	/**

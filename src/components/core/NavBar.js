@@ -1,8 +1,8 @@
 import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
-import { setThemeDark, setThemeLight } from '../helpers/theme';
-import { ThemeContext } from './ThemeContext';
-import { MoonIcon, SunIcon, SearchIcon } from '../assets/Icons';
+import { setThemeDark, setThemeLight } from '../../helpers/theme';
+import { MoonIcon, SunIcon, GithubIcon } from '../../assets/Icons';
+import { ThemeContext } from '../providers/ThemeContext';
 
 const NavBar = () => {
 	/**
@@ -35,14 +35,18 @@ const NavBar = () => {
 	const themeToggleButton = () => {
 		return (
 			<React.Fragment>
-				<button className='theme-toggle' onClick={toggleTheme}>
+				<button
+					className='theme-toggle'
+					onClick={toggleTheme}
+					title='change theme'
+				>
 					{/**
 					 * Show the moon icon if darkmode is active
 					 */}
 					{darkMode && <MoonIcon />}
 
 					{/**
-					 * Shoe the sun icon if darkmode is not active
+					 * Show the sun icon if darkmode is not active
 					 */}
 					{!darkMode && <SunIcon />}
 				</button>
@@ -78,16 +82,21 @@ const NavBar = () => {
 	};
 
 	/**
-	 * rendering the search button
+	 * rendering the github button
 	 */
-	const searchButton = () => {
+	const githubIcon = () => {
 		return (
 			<React.Fragment>
-				<Link to={'/search'}>
+				<a
+					href='https://github.com/arunabharjun/roi-calculator'
+					target='_blank'
+					rel='noopener noreferrer'
+					title='GitHub Repo'
+				>
 					<button className='search-icon'>
-						<SearchIcon />
+						<GithubIcon />
 					</button>
-				</Link>
+				</a>
 			</React.Fragment>
 		);
 	};
@@ -103,7 +112,7 @@ const NavBar = () => {
 						<div className='container flex-box flex-row flex-space-btw'>
 							{themeToggleButton()}
 							{brandName()}
-							{searchButton()}
+							{githubIcon()}
 						</div>
 					</div>
 				</nav>
