@@ -42,5 +42,5 @@ The app should have opened in your default browser, but if it didn't, visit [htt
 2. Email Validation
 3. Dark & Light themes
 4. Custom 404 error page
-5. Respponsive layout
+5. Responsive layout
 6. Modern UI
